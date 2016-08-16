@@ -7,7 +7,7 @@ mi=regionprops(m,'MinorAxisLength');
 max=ma.MajorAxisLength;
 min=mi.MinorAxisLength;
 if(max>=min)
-    DIA=min;
+   DIA=min;
 end
  
             
