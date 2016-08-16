@@ -24,7 +24,7 @@ p2= p-r;
    b2=a2;
    b3=r+p2;
    b2(:,r:b3)=0;
-   a2=b2;
+   a2=b2; 
 end
 a3=fliplr(a2);
 a4=xor(a1,a3);
