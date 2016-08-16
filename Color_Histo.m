@@ -23,5 +23,5 @@ blue = length(find(h > .5833 & h <= .75))/pixels;
 magenta = length(find(h > .75 & h <= .9167))/pixels;
 dark_brown = length(find((h >0.9694  | h <= 0.1361) & h ~= -1))/pixels;
 light_brown = length(find((h >0.9722  | h <= 0.1388) & h ~= -1))/pixels;
-%Plots histogram
+%Plots histogram 
 end
