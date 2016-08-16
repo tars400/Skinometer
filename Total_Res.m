@@ -60,7 +60,7 @@ end
  if(TDV <= 5.25)
      {
          fprintf('Malignant skin,contains Malanoma,Please consult a Dermatologist');
-         }
+    }
  else if(TDV >=4.75 && TDV <=5.25)
        {
              fprintf('Suspicious, Consult a Dermatologist');
