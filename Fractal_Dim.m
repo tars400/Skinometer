@@ -22,7 +22,7 @@ Ny = size(e2,2);
 for numBlocks = 1:25
      
     sizeBlocks_x = floor(Nx./numBlocks);
-    sizeBlocks_y = floor(Ny./numBlocks);
+    sizeBlocks_y = floor(Ny./numBlocks); 
      
     flag = zeros(numBlocks,numBlocks);
     for i = 1:numBlocks
