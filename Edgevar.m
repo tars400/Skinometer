@@ -15,7 +15,7 @@ for i=1:Nx
         end
     end
 end
-% centroid
+% centroid 
 mx=mx/sum(sum(MM));
 my=my/sum(sum(MM));
 D=zeros(Nx*Ny,1);
