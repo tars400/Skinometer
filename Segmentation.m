@@ -1,4 +1,4 @@
-function [I,bw]=Segmentation(input)
+function [I,bw]=Segmentation(input) 
  rgb = imread(input);
 I = rgb2gray(rgb);
 hy = fspecial('sobel');
