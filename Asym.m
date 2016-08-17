@@ -54,9 +54,7 @@ else
 end
 a9=flipud(a8);
 a10=xor(a7,a9);
- %imshow(a7)
- %subplot(2,2,4)
- %imshow(a8)
+
 a11=bwarea(a10);
 AI2=(a11)/a6;
 AI=(AI1+AI2)/2;
