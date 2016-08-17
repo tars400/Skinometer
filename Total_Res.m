@@ -1,6 +1,4 @@
 function [ TDV ] = Total_Res(input)
-%UNTITLED6 Summary of this function goes here
-%   Detailed explanation goes here
 [Asymmtry,CI]=Asym(input);
 [VI]=Edgevar(input);
 [fractal]=Fractal_Dim(input);
@@ -54,7 +52,7 @@ end
  %D score
  D=0.5*dia;
  D
- %total dermotalogy score
+ %total dermotoscopic value
  TDV=(A+B+C+D);
  
  if(TDV <= 5.25)
