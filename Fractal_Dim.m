@@ -1,21 +1,12 @@
 function [fractal]=Fractal_Dim(input)
 clc;
-%figure(1)
-%imshow(input)
 [I,bw]=Segmentation(input);
-% detect the edge of image 'p' using the Canny algorithm
-% this gives edge as 'e2'
 
 e2 = edge(bw,'canny');
 figure(2)
 imshow(e2)
  
  
-% once we have e2, set up a grid of blocks across the image
-% and scan each bloch too see if the edge occupies any of the blocks.
-% If a block is occupied then flag it and record it in boxCount --
-% store both size of blocks (numBlocks) and no of occupied boxes (boxCount)
-% in table()
 Nx = size(e2,1);
 Ny = size(e2,2);
  
@@ -44,8 +35,6 @@ for numBlocks = 1:25
 end
  
  
-% from the above table of discrete points, take a line of best fit and plot
-% the raw data (ro) and line of best fit (r-)
 x      = table(:,1);    % x is numBlocks
 y      = table(:,2);    % y is boxCount
  
