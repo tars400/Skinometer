@@ -24,7 +24,6 @@ P=0;
 e1=sqrt(0.5);
 e2=1;
 e3=2*e1;
-% MM(i,j)+MM(i+1,j)*2+MM(i,j+1)*4+MM(i+1,j+1)*8;
 T=filter2([1 4;2 8],double(MM),'same');
 for i=1:Nx-1
     for j=1:Ny-1
