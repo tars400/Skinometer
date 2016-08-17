@@ -1,6 +1,4 @@
 function [black ,white ,red ,blue ,dark_brown ,light_brown,yellow,green,cyan,magenta] = Color_Histo( input )
-%color historam Summary of this function goes here
-%   Detailed explanation goes here
 I = imread(input);
 [index,map] = rgb2ind(I,1024);
 pixels = prod(size(index));
@@ -23,5 +21,4 @@ blue = length(find(h > .5833 & h <= .75))/pixels;
 magenta = length(find(h > .75 & h <= .9167))/pixels;
 dark_brown = length(find((h >0.9694  | h <= 0.1361) & h ~= -1))/pixels;
 light_brown = length(find((h >0.9722  | h <= 0.1388) & h ~= -1))/pixels;
-%Plots histogram 
 end
