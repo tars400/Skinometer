@@ -1,4 +1,5 @@
 function [I,bw]=Segmentation(input) 
+ %segmentation of the patch
  rgb = imread(input);
 I = rgb2gray(rgb);
 hy = fspecial('sobel');
