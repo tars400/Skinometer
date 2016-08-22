@@ -40,22 +40,22 @@ end
  else
      dia=DIA;
  end
- %A score
+ 
  A=1.3*Asymmtry;
  A
- %b score
+ 
  B=0.1*(CI+VI+fractal+l+lg);
  B
- %C score
+ 
  C=0.5*(w+b+r+bl+d+li);
  C
- %D score
+ 
  D=0.5*dia;
  D
  %total dermotoscopic value
  TDV=(A+B+C+D);
  
- if(TDV <= 5.25)
+ if(TDV >= 5.25)
      {
          fprintf('Malignant skin,contains Malanoma,Please consult a Dermatologist');
     }
