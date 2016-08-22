@@ -1,5 +1,4 @@
 function [ DIA ] = Diameter( input )
- 
 [I,bw]=segmentation(input);
 m=imcomplement(bw);
 ma=regionprops(m,'majoraxislength');
