@@ -52,8 +52,9 @@ end
  
  D=0.5*dia;
  D
- %total dermotoscopic value
- TDV=(A+B+C+D);
+
+ TDV=(A+B+C+D);  %total dermotoscopic value
+
  
  if(TDV >= 5.25)
      {
