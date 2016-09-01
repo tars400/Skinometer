@@ -1,4 +1,5 @@
 function [Asymmtry,CI]=Asym(input)
+
 [I,bw]=Segmentation(input);
 a=imcomplement(bw);
 plp=regionprops(a,'perimeter');
@@ -29,9 +30,9 @@ end
 a3=fliplr(a2);
 a4=xor(a1,a3);
 subplot(2,2,1)
- imshow(a1)
- subplot(2,2,2)
- imshow(a2)
+imshow(a1)
+subplot(2,2,2)
+imshow(a2)
 a5=bwarea(a4);
 a6=bwarea(a);
 AI1=(a5)/a6;
@@ -59,4 +60,4 @@ a11=bwarea(a10);
 AI2=(a11)/a6;
 AI=(AI1+AI2)/2;
 CI=(pp*pp)/(4*pi*a6);
- Asymmtry=1.3*AI;
+Asymmtry=1.3*AI;
