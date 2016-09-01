@@ -6,12 +6,13 @@ hsv = rgb2hsv(map);
 h = hsv(:,1);
 s = hsv(:,2);
 v = hsv(:,3);
-%Finds location of black and white pixels
-darks = find(v < .2)';
+
+darks = find(v < .2)';             %Finds location of black and white pixels
 lights = find(s < .05 & v > .85)';
 h([darks lights]) = -1;
-%Gets the number of all pixels for each color bin
-black = length(darks)/pixels;
+
+
+black = length(darks)/pixels;     %Gets the number of all pixels for each color bin
 white = length(lights)/pixels;
 red = length(find((h > .9167 | h <= .083) & h ~= -1))/pixels;
 yellow = length(find(h > .083 & h <= .25))/pixels;
