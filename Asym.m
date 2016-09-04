@@ -1,6 +1,6 @@
 function [Asymmtry,CI]=Asym(input)
-
 [I,bw]=Segmentation(input);
+
 a=imcomplement(bw);
 plp=regionprops(a,'perimeter');
 pl=regionprops(a,'centroid');
@@ -13,6 +13,7 @@ a1=a(:,1:p);
 a2=a(:,p+1:end);
 [m n]=size(a);
 r=m-p;
+
 if(p<=r)
   p1= r-p;
    b1=a1;
@@ -53,10 +54,11 @@ else
     b8(r1:b7,:)=0;
     a8=b8;
 end
+
 a9=flipud(a8);
 a10=xor(a7,a9);
-
 a11=bwarea(a10);
+
 AI2=(a11)/a6;
 AI=(AI1+AI2)/2;
 CI=(pp*pp)/(4*pi*a6);
