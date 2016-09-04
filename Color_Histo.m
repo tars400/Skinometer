@@ -1,4 +1,5 @@
 function [black ,white ,red ,blue ,dark_brown ,light_brown,yellow,green,cyan,magenta] = Color_Histo( input )
+
 I = imread(input);
 [index,map] = rgb2ind(I,1024);
 pixels = prod(size(index));
@@ -10,7 +11,6 @@ v = hsv(:,3);
 darks = find(v < .2)';             %Finds location of black and white pixels
 lights = find(s < .05 & v > .85)';
 h([darks lights]) = -1;
-
 
 black = length(darks)/pixels;     %Gets the number of all pixels for each color bin
 white = length(lights)/pixels;
