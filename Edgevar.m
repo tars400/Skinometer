@@ -1,11 +1,13 @@
 function [VI]=Edgevar(input)
 [I,bw]=Segmentation(input);
+
 M=imcomplement(bw);
 [Nx,Ny]=size(M);
 MM=zeros(Nx,Ny);
  
 mx=0;
 my=0;
+
 for i=1:Nx
     for j=1:Ny
         if M(i,j)<1
@@ -15,6 +17,7 @@ for i=1:Nx
         end
     end
 end
+
 % centroid 
 mx=mx/sum(sum(MM));
 my=my/sum(sum(MM));
@@ -25,6 +28,7 @@ e1=sqrt(0.5);
 e2=1;
 e3=2*e1;
 T=filter2([1 4;2 8],double(MM),'same');
+
 for i=1:Nx-1
     for j=1:Ny-1
         flag=T(i,j);
